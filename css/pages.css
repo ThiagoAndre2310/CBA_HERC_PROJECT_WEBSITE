@@ -1,0 +1,42 @@
+/* Reusable page-level patterns; page markup is intentionally out of scope. */
+.page-intro {
+  display: grid;
+  gap: var(--space-4);
+  padding-block: var(--space-7);
+}
+
+.page-intro__title {
+  max-width: 18ch;
+}
+
+.page-intro__summary {
+  max-width: 62ch;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-lg);
+}
+
+.resource-grid,
+.activity-grid,
+.team-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-4);
+}
+
+.prose {
+  max-width: 70ch;
+}
+
+.prose > * + * {
+  margin-block-start: var(--space-4);
+}
+
+.prose h2,
+.prose h3 {
+  margin-block-start: var(--space-6);
+}
+
+.prose ul,
+.prose ol {
+  padding-inline-start: 1.5em;
+}

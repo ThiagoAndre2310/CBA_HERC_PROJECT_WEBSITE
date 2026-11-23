@@ -1,0 +1,66 @@
+:root {
+  color-scheme: light;
+
+  /* Brand palette */
+  --color-navy-night: #102A56;
+  --color-navy-deep: #174A8B;
+  --color-blue-mid: #3478C8;
+  --color-blue-light: #DCEBFF;
+
+  /* Semantic colors */
+  --color-primary: var(--color-navy-night);
+  --color-secondary: var(--color-navy-deep);
+  --color-accent: var(--color-blue-mid);
+  --color-accent-soft: var(--color-blue-light);
+  --color-background: #F7F9FC;
+  --color-surface: #FFFFFF;
+  --color-surface-muted: #EEF3FA;
+  --color-text: #172B49;
+  --color-text-muted: #4B5D75;
+  --color-text-inverse: #FFFFFF;
+  --color-border: #CBD6E5;
+  --color-border-strong: #9AABC1;
+  --color-focus: #145DB8;
+  --color-success: #176B4D;
+  --color-warning: #805400;
+  --color-danger: #A12C37;
+
+  /* Typography */
+  --font-family-base: "Poppins", "Avenir Next", Avenir, "Segoe UI", sans-serif;
+  --font-family-accent: "Harmonie", "Poppins", "Avenir Next", Avenir, sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: clamp(1.25rem, 1.1rem + 0.7vw, 1.75rem);
+  --font-size-2xl: clamp(1.75rem, 1.4rem + 1.6vw, 2.75rem);
+  --font-size-3xl: clamp(2.25rem, 1.7rem + 2.6vw, 3.75rem);
+  --line-height-tight: 1.15;
+  --line-height-heading: 1.25;
+  --line-height-body: 1.65;
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --space-section: clamp(3rem, 7vw, 6rem);
+
+  /* Shape, shadows, and layout */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1.25rem;
+  --radius-pill: 999px;
+  --shadow-sm: 0 2px 8px rgb(16 42 86 / 8%);
+  --shadow-md: 0 10px 28px rgb(16 42 86 / 12%);
+  --shadow-lg: 0 20px 48px rgb(16 42 86 / 16%);
+  --container-width: 72rem;
+  --container-gutter: clamp(1rem, 4vw, 2rem);
+  --control-height: 2.875rem;
+  --transition-fast: 160ms ease;
+}
