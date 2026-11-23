@@ -9,6 +9,14 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .access-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ai-panel {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
   .page-intro {
     padding-block: var(--space-8);
   }
@@ -17,7 +25,8 @@
 @media (min-width: 64rem) {
   .resource-grid,
   .activity-grid,
-  .team-grid {
+  .team-grid,
+  .access-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: var(--space-5);
   }
@@ -53,9 +62,21 @@
     color-scheme: light;
     --color-background: #FFFFFF;
     --color-surface: #FFFFFF;
+    --color-surface-raised: #FFFFFF;
+    --color-surface-overlay: #FFFFFF;
+    --color-surface-muted: #F2F2F2;
     --color-text: #000000;
     --color-text-muted: #333333;
+    --color-text-dark: #000000;
+    --color-text-inverse: #000000;
+    --color-primary: #000000;
+    --color-secondary: #000000;
+    --color-link: #000000;
+    --color-link-hover: #000000;
     --color-border: #888888;
+    --shadow-sm: none;
+    --shadow-md: none;
+    --shadow-lg: none;
   }
 
   html,
@@ -81,6 +102,11 @@
   .card {
     break-inside: avoid;
     box-shadow: none;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
   }
 
   a {

@@ -18,8 +18,10 @@ body {
   background: var(--color-background);
   color: var(--color-text);
   font-size: var(--font-size-md);
-  font-weight: 400;
+  font-weight: var(--font-weight-regular);
   text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1,
@@ -30,7 +32,7 @@ h5,
 h6 {
   color: var(--color-primary);
   font-family: var(--font-family-base);
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   line-height: var(--line-height-heading);
   text-wrap: balance;
 }
@@ -45,12 +47,23 @@ li {
 }
 
 a {
+  color: var(--color-link);
   text-decoration-thickness: 0.08em;
   text-underline-offset: 0.18em;
 }
 
 a:hover {
-  color: var(--color-secondary);
+  color: var(--color-link-hover);
+}
+
+::placeholder {
+  color: var(--color-text-muted);
+  opacity: 1;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--color-border);
 }
 
 ::selection {

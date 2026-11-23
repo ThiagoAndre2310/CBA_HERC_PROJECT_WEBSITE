@@ -23,6 +23,10 @@
   background: var(--color-surface-muted);
 }
 
+.section--raised {
+  background: var(--color-surface-raised);
+}
+
 .cluster {
   display: flex;
   flex-wrap: wrap;
@@ -62,7 +66,7 @@
 }
 
 .section-heading__eyebrow {
-  color: var(--color-secondary);
+  color: var(--color-blue-light);
   font-size: var(--font-size-sm);
   font-weight: 700;
   letter-spacing: 0.1em;

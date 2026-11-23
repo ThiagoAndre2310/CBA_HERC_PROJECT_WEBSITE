@@ -1,8 +1,10 @@
 .site-header {
-  position: relative;
+  position: sticky;
+  top: 0;
   z-index: 10;
   border-bottom: 1px solid var(--color-border);
-  background: var(--color-surface);
+  background: rgb(16 42 86 / 94%);
+  backdrop-filter: blur(16px);
 }
 
 .site-nav {
@@ -14,7 +16,7 @@
 }
 
 .site-nav__brand {
-  color: var(--color-primary);
+  color: var(--color-text);
   font-size: var(--font-size-lg);
   font-weight: 700;
   text-decoration: none;
@@ -31,16 +33,20 @@
 }
 
 .site-nav__link {
-  color: var(--color-text);
+  color: var(--color-text-muted);
   font-size: var(--font-size-sm);
   font-weight: 600;
   text-decoration: none;
 }
 
 .site-nav__link[aria-current="page"] {
-  color: var(--color-secondary);
+  color: var(--color-blue-light);
   text-decoration: underline;
   text-decoration-thickness: 2px;
+}
+
+.site-nav__link:hover {
+  color: var(--color-text-inverse);
 }
 
 .button {
@@ -56,37 +62,49 @@
   line-height: 1.25;
   text-align: center;
   text-decoration: none;
-  transition: background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+  transition: background-color var(--transition-standard), border-color var(--transition-standard), color var(--transition-standard), box-shadow var(--transition-standard), transform var(--transition-standard);
 }
 
 .button--primary {
-  background: var(--color-primary);
+  background: var(--color-blue-mid);
   color: var(--color-text-inverse);
+  box-shadow: 0 6px 18px rgb(52 120 200 / 28%);
 }
 
 .button--primary:hover {
-  background: var(--color-secondary);
+  background: var(--color-navy-deep);
   color: var(--color-text-inverse);
+  box-shadow: 0 10px 24px rgb(52 120 200 / 35%);
+  transform: translateY(-2px);
 }
 
 .button--secondary {
-  border-color: var(--color-primary);
-  background: var(--color-surface);
-  color: var(--color-primary);
+  border-color: var(--color-border-strong);
+  background: var(--color-surface-raised);
+  color: var(--color-text);
 }
 
 .button--secondary:hover {
-  background: var(--color-blue-light);
-  color: var(--color-primary);
+  border-color: var(--color-blue-light);
+  background: var(--color-surface-overlay);
+  color: var(--color-blue-light);
 }
 
 .card {
   min-width: 0;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  background: var(--color-surface);
+  background: linear-gradient(155deg, var(--color-surface-raised), var(--color-surface));
   box-shadow: var(--shadow-sm);
   padding: var(--space-5);
+  transition: border-color var(--transition-standard), box-shadow var(--transition-standard), transform var(--transition-standard), background-color var(--transition-standard);
+}
+
+.card--interactive:hover,
+a.card:hover {
+  border-color: var(--color-blue-mid);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
 }
 
 .resource-card,
@@ -113,7 +131,7 @@
 }
 
 .activity-card__date {
-  color: var(--color-secondary);
+  color: var(--color-blue-light);
   font-size: var(--font-size-sm);
   font-weight: 700;
 }
@@ -126,7 +144,7 @@
 
 .site-footer {
   border-top: 1px solid var(--color-border);
-  background: var(--color-navy-night);
+  background: #07172F;
   color: var(--color-text-inverse);
   padding-block: var(--space-7);
 }
@@ -141,7 +159,7 @@
 }
 
 .form-label {
-  color: var(--color-primary);
+  color: var(--color-text);
   font-size: var(--font-size-sm);
   font-weight: 700;
 }
@@ -151,7 +169,7 @@
   min-height: var(--control-height);
   border: 1px solid var(--color-border-strong);
   border-radius: var(--radius-sm);
-  background: var(--color-surface);
+  background: var(--color-surface-raised);
   color: var(--color-text);
   padding: var(--space-2) var(--space-3);
 }
@@ -173,17 +191,28 @@
   overflow: auto;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  background: var(--color-surface);
+  background: var(--color-surface-raised);
   box-shadow: var(--shadow-lg);
   color: var(--color-text);
   padding: var(--space-6);
 }
 
 .modal::backdrop {
-  background: rgb(16 42 86 / 64%);
+  background: rgb(3 12 28 / 78%);
 }
 
 :focus-visible {
   outline: 3px solid var(--color-focus);
   outline-offset: 3px;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(1rem);
+  transition: opacity var(--transition-emphasis), transform var(--transition-emphasis);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
