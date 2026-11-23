@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 760" role="img" aria-labelledby="title desc">
+  <title id="title">Rover educativo en un paisaje espacial</title>
+  <desc id="desc">Ilustración original de un pequeño rover científico sobre un terreno azul, con un planeta y órbitas al fondo.</desc>
+  <defs>
+    <linearGradient id="sky" x1=".1" y1="0" x2=".9" y2="1"><stop stop-color="#174A8B"/><stop offset=".55" stop-color="#102A56"/><stop offset="1" stop-color="#08172F"/></linearGradient>
+    <radialGradient id="planet"><stop stop-color="#DCEBFF"/><stop offset=".62" stop-color="#78B6FF"/><stop offset="1" stop-color="#3478C8"/></radialGradient>
+    <linearGradient id="ground" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#3478C8"/><stop offset="1" stop-color="#102A56"/></linearGradient>
+    <linearGradient id="rover" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#F3F7FF"/><stop offset="1" stop-color="#A9C6EB"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="12" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <pattern id="stars" width="117" height="113" patternUnits="userSpaceOnUse"><circle cx="12" cy="19" r="1.3" fill="#DCEBFF" opacity=".65"/><circle cx="78" cy="51" r=".9" fill="#DCEBFF" opacity=".48"/><circle cx="48" cy="94" r="1.1" fill="#78B6FF" opacity=".72"/></pattern>
+  </defs>
+  <rect x="35" y="30" width="830" height="670" rx="34" fill="url(#sky)" stroke="#6C9ED8" stroke-opacity=".32"/>
+  <rect x="36" y="31" width="828" height="668" rx="33" fill="url(#stars)"/>
+  <circle cx="631" cy="236" r="132" fill="#3478C8" opacity=".15" filter="url(#glow)"/>
+  <circle cx="631" cy="236" r="102" fill="url(#planet)"/>
+  <path d="M535 235c59-32 130-40 194-19M546 285c57-20 113-21 169-7" fill="none" stroke="#DCEBFF" stroke-opacity=".35" stroke-width="3"/>
+  <ellipse cx="631" cy="236" rx="171" ry="49" transform="rotate(-21 631 236)" fill="none" stroke="#DCEBFF" stroke-opacity=".55" stroke-width="2"/>
+  <circle cx="480" cy="293" r="6" fill="#DCEBFF" filter="url(#glow)"/>
+  <path d="M75 536c136-64 231-68 343-34 113 34 251 8 445-55v220H75z" fill="#102A56"/>
+  <path d="M75 590c161-53 261-45 385-9 125 37 256 11 403-31v149H75z" fill="url(#ground)"/>
+  <path d="M99 645c142-30 260-12 373 18M589 626c81-17 154-15 233 4" fill="none" stroke="#DCEBFF" stroke-opacity=".2" stroke-width="2"/>
+  <g transform="translate(246 350)">
+    <path d="M155 66 209 8l21 7-37 66" fill="none" stroke="#DCEBFF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="233" cy="15" r="11" fill="#78B6FF"/>
+    <path d="M207 5 216-26l31 8-10 36" fill="#3478C8" stroke="#DCEBFF" stroke-width="3"/>
+    <path d="M126 77V37h86v40" fill="#174A8B" stroke="#DCEBFF" stroke-width="4"/>
+    <path d="M144 37V8h49v29" fill="url(#rover)" stroke="#DCEBFF" stroke-width="4"/>
+    <path d="M151 17h35v14h-35z" fill="#3478C8"/>
+    <circle cx="168" cy="23" r="4" fill="#DCEBFF"/>
+    <path d="M126 50h-44v25h44M212 50h38v25h-38" fill="#174A8B" stroke="#DCEBFF" stroke-width="4"/>
+    <path d="M77 56h-22v22h22M254 56h22v22h-22" fill="#3478C8" stroke="#DCEBFF" stroke-width="4"/>
+    <path d="M139 77 124 108M198 77l17 31" stroke="#DCEBFF" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="118" cy="119" r="27" fill="#08172F" stroke="#A9C6EB" stroke-width="8"/>
+    <circle cx="222" cy="119" r="27" fill="#08172F" stroke="#A9C6EB" stroke-width="8"/>
+    <circle cx="118" cy="119" r="7" fill="#3478C8"/><circle cx="222" cy="119" r="7" fill="#3478C8"/>
+    <path d="M93 119h50M197 119h50" stroke="#DCEBFF" stroke-opacity=".6" stroke-width="2"/>
+  </g>
+  <g fill="#DCEBFF" opacity=".8"><path d="m359 171 4 11 11 4-11 4-4 11-4-11-11-4 11-4z"/><path d="m759 398 3 8 8 3-8 3-3 8-3-8-8-3 8-3z"/><circle cx="277" cy="258" r="3"/><circle cx="756" cy="163" r="2"/></g>
+  <path d="M96 96h116M96 96v116M804 628H688m116 0V512" fill="none" stroke="#DCEBFF" stroke-opacity=".3" stroke-width="2"/>
+</svg>
