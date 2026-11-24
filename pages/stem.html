@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#102A56">
+    <meta name="description" content="Explorá recursos y experiencias de Matemáticas, Física, Química, Robótica y Astronomía.">
+    <title>Explorá el universo STEM | Aula STEM Bolivia</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <script type="module" src="../js/stem.js"></script>
+  </head>
+  <body class="stem-hub">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="site-header">
+      <nav class="site-nav container container--wide" aria-label="Navegación principal">
+        <a class="site-nav__brand" href="../index.html" aria-label="Aula STEM Bolivia, inicio">
+          <span class="brand-mark" aria-hidden="true">A<span>·</span></span>
+          <span class="brand-name">Aula STEM <small>Bolivia</small></span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Abrir menú"><span></span><span></span></button>
+        <ul class="site-nav__links" id="primary-menu" role="list">
+          <li><a class="site-nav__link" href="../index.html#inicio">Inicio</a></li>
+          <li><a class="site-nav__link" href="#catalogo" aria-current="page">Recursos</a></li>
+          <li><a class="site-nav__link" href="../index.html#ia-aula">IA en el aula</a></li>
+          <li><a class="site-nav__link" href="../index.html#actividades">Charlas y feria</a></li>
+          <li><a class="site-nav__login" href="../index.html#login">Login <span aria-hidden="true">↗</span></a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="contenido">
+      <section class="stem-hero" aria-labelledby="stem-title">
+        <div class="stem-hero__grid" aria-hidden="true"></div>
+        <div class="container stem-hero__layout">
+          <div class="stem-hero__copy">
+            <p class="eyebrow"><span class="eyebrow__line"></span> AULA STEM BOLIVIA · RECURSOS EDUCATIVOS</p>
+            <h1 id="stem-title">Explorá el<br><span>universo STEM.</span></h1>
+            <p>Preguntas para investigar, ideas para construir y experiencias para llevar la ciencia a tu aula.</p>
+            <a class="button button--primary" href="#catalogo">Encontrá tu próximo desafío <span aria-hidden="true">↓</span></a>
+            <div class="stem-hero__subjects" aria-label="Cinco áreas STEM"><span>MATEMÁTICAS</span><i></i><span>FÍSICA</span><i></i><span>QUÍMICA</span><i></i><span>ROBÓTICA</span><i></i><span>ASTRONOMÍA</span></div>
+          </div>
+          <figure class="stem-hero__art">
+            <img src="../assets/images/aula-stem-rover.svg" alt="Ilustración original de un rover educativo explorando un paisaje espacial" width="900" height="760">
+            <figcaption>OBSERVAR · PREGUNTAR · PROBAR</figcaption>
+          </figure>
+          <div class="stem-hero__index" aria-hidden="true">01 <span>/ 05 ÁREAS</span></div>
+        </div>
+      </section>
+
+      <nav class="subject-nav" aria-label="Explorar por área"><div class="container subject-nav__inner">
+        <span class="subject-nav__label">IR A UN ÁREA</span>
+        <div class="subject-nav__items" id="subject-shortcuts"></div>
+      </div></nav>
+
+      <section class="section stem-catalog" id="catalogo" aria-labelledby="catalog-title">
+        <div class="container">
+          <div class="section-heading stem-section-heading reveal">
+            <p class="eyebrow">Tu laboratorio empieza acá</p>
+            <h2 id="catalog-title">Recursos para <span class="text-blue">explorar y crear.</span></h2>
+            <p>Buscá un tema, elegí un área o encontrá una actividad para tu nivel.</p>
+          </div>
+
+          <form class="resource-filters" id="resource-filters" role="search" novalidate>
+            <label class="filter-search"><span class="sr-only">Buscar recursos por título o descripción</span><span class="filter-search__icon" aria-hidden="true">⌕</span><input id="resource-search" type="search" name="q" placeholder="¿Qué te gustaría explorar?" autocomplete="off"><kbd>/</kbd></label>
+            <label class="filter-select"><span class="sr-only">Filtrar por área</span><select id="subject-filter" name="subject"><option value="">Todas las áreas</option></select></label>
+            <label class="filter-select"><span class="sr-only">Filtrar por nivel sugerido</span><select id="level-filter" name="level"><option value="">Todos los niveles</option></select></label>
+            <button class="filter-reset" type="reset">Limpiar filtros <span aria-hidden="true">↺</span></button>
+          </form>
+
+          <div class="resource-results-line"><p id="result-count" role="status" aria-live="polite"></p><span>RECURSOS EDUCATIVOS · EDICIÓN 01</span></div>
+          <div class="hub-resource-grid" id="hub-resource-list"></div>
+          <div class="resource-empty" id="resource-empty" hidden>
+            <span aria-hidden="true">⌕</span><h3>No encontramos recursos con esos filtros.</h3><p>Probá con otra búsqueda o limpiá los filtros para volver a explorar todas las áreas.</p><button class="button button--secondary" type="button" data-reset-filters>Mostrar todos los recursos</button>
+          </div>
+          <p class="catalog-note">Estas propuestas son ejemplos educativos adaptables. Ajustá materiales y actividades a las condiciones y orientaciones de tu aula.</p>
+        </div>
+      </section>
+
+      <section class="resource-detail section" id="resource-detail" aria-labelledby="detail-title" hidden>
+        <div class="container">
+          <div class="detail-topbar"><a class="detail-back" href="./stem.html#catalogo" data-back-to-catalog><span aria-hidden="true">←</span> Volver al catálogo</a><button class="button button--secondary print-resource" type="button"><span aria-hidden="true">▤</span> Imprimir recurso</button></div>
+          <div id="detail-content"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><div class="container footer-layout">
+      <div class="footer-identity"><a class="site-nav__brand" href="../index.html"><span class="brand-mark" aria-hidden="true">A<span>·</span></span><span class="brand-name">Aula STEM <small>Bolivia</small></span></a><p>Ciencia que se vive. Ideas que se comparten.</p><p class="footer-affiliation">Recursos educativos de ejemplo para adaptar al aula.</p></div>
+      <nav class="footer-nav" aria-label="Navegación de recursos"><p class="footer-nav__title">EXPLORAR</p><a href="#catalogo">Catálogo STEM</a><a href="../index.html#ia-aula">IA en el aula</a><a href="../index.html#actividades">Charlas y feria</a></nav>
+      <nav class="footer-nav" aria-label="Información del sitio"><p class="footer-nav__title">AULA STEM</p><a href="../index.html#inicio">Inicio</a><a href="../index.html#colaboradores">Colaboradores</a><a href="../index.html#login">Acceso</a></nav>
+      <div class="footer-bottom"><span>© Aula STEM Bolivia</span><a href="#contenido">Volver arriba ↑</a></div>
+    </div></footer>
+  </body>
+</html>
