@@ -234,3 +234,32 @@
 @media (prefers-reduced-motion: reduce) {
   .outreach-filter, .outreach-card, .outreach-card__toggle, .site-nav__login { transition: none; }
 }
+
+@media (max-width: 63.99rem) {
+  .team-hero__layout { min-height: 0; grid-template-columns: minmax(0, 1fr) minmax(0, .9fr); gap: 1rem; padding-block: 3.5rem; }
+  .team-hero__visual { width: 55vw; margin-inline-end: -2rem; }
+  .learning-stories__layout { gap: 2rem; }
+}
+@media (max-width: 39.99rem) {
+  .team-hero__layout, .learning-stories__layout { grid-template-columns: minmax(0, 1fr); }
+  .team-hero__copy h1 { font-size: clamp(2.8rem, 12vw, 4.2rem); }
+  .team-hero__visual { width: min(100%, 32rem); justify-self: center; margin: .5rem 0 0; }
+  .member-profile__body { grid-template-columns: 5.5rem minmax(0, 1fr); gap: .8rem; padding: 1rem; }
+  .member-profile__portrait { min-height: 6rem; }
+  .member-profile__body .badge { font-size: .5rem; }
+  .member-profile__story, .member-profile__credits { grid-template-columns: minmax(0, 1fr); }
+  .team-gallery__grid { grid-template-columns: minmax(0, 1fr); }
+  .gallery-feature { grid-row: auto; }
+  .gallery-feature img { height: 13rem; }
+  .gallery-note { min-height: 9rem; }
+  .submission-progress { gap: .2rem; }
+  .submission-progress li b { font-size: .59rem; }
+  .submission-progress li span { font-size: .53rem; }
+  .submission-review { grid-template-columns: minmax(0, 1fr); }
+  .submission-actions { flex-wrap: wrap; }
+  .submission-actions__note { order: 3; width: 100%; }
+  .submission-actions .button { padding-inline: .8rem; font-size: .72rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .member-profile, .gallery-note, .submission-choice { transition: none; }
+}
