@@ -179,3 +179,58 @@
   .footer-layout { grid-template-columns: repeat(3, 1fr); }
   .footer-bottom { display: none; }
 }
+
+@media (max-width: 63.99rem) {
+  .outreach-hero__layout { min-height: 0; grid-template-columns: minmax(0, 1fr) minmax(0, .85fr); gap: 1.25rem; padding-block: 3.5rem 4rem; }
+  .outreach-hero__copy h1 { font-size: clamp(3.2rem, 7vw, 4.8rem); }
+  .outreach-hero__art { width: 56vw; margin-inline: -2rem -3rem; }
+  .outreach-month { grid-template-columns: 4.2rem minmax(0, 1fr); gap: 1.1rem; }
+  .outreach-month__marker span { width: 2.8rem; height: 2.8rem; }
+  .outreach-month__marker i { inset-block-start: 3.3rem; }
+  .outreach-fair__panel { min-height: 27rem; }
+  .outreach-fair__date { min-height: 14rem; padding-inline-start: 1.4rem; }
+  .outreach-connect__layout { grid-template-columns: minmax(0, 1.15fr) minmax(14rem, .85fr); gap: 2rem; }
+  .outreach-connect__visual { min-height: 18rem; }
+}
+
+@media (max-width: 39.99rem) {
+  .outreach-hero__layout { grid-template-columns: minmax(0, 1fr); padding-block: 3rem 3.5rem; }
+  .outreach-hero__copy h1 { max-width: 9ch; font-size: clamp(3rem, 13vw, 4.5rem); }
+  .outreach-hero__copy > p:not(.eyebrow, .outreach-hero__note) { font-size: .95rem; }
+  .outreach-hero__art { width: min(100%, 34rem); justify-self: center; margin: .6rem 0 0; }
+  .outreach-hero__index { inset-block-start: .2rem; }
+  .outreach-toolbar { align-items: flex-start; flex-wrap: wrap; gap: .35rem .6rem; padding-block: .8rem; }
+  .outreach-toolbar__label { align-self: center; }
+  .outreach-month-filters { gap: .15rem; }
+  .outreach-filter { min-height: 2.1rem; padding-inline: .55rem; font-size: .67rem; }
+  .outreach-results { width: 100%; margin-inline-start: 0; padding-inline-start: .2rem; }
+  .outreach-month { grid-template-columns: 2.5rem minmax(0, 1fr); gap: .6rem; }
+  .outreach-month__marker span { position: sticky; top: 6rem; width: 2.15rem; height: 2.15rem; box-shadow: 0 0 0 .3rem rgb(52 120 200 / 8%); font-size: .5rem; }
+  .outreach-month__marker i { inset-block-start: 2.6rem; }
+  .outreach-month__header { align-items: flex-start; flex-direction: column; gap: .65rem; padding-block-end: .9rem; }
+  .outreach-month__header h3 { font-size: 2rem; }
+  .outreach-card summary { grid-template-columns: 1.3rem minmax(0, 1fr) 1.6rem; gap: .5rem; min-height: 6.6rem; padding-inline-end: 0; }
+  .outreach-card__date { font-size: .58rem; }
+  .outreach-card__title { font-size: .93rem; }
+  .outreach-card__topic { font-size: .68rem; }
+  .outreach-card__toggle { width: 1.5rem; }
+  .outreach-card__detail { padding-inline: 1.8rem 0; font-size: .76rem; }
+  .outreach-fair__panel { min-height: 0; grid-template-columns: minmax(0, 1fr); gap: 1.5rem; padding: 1.5rem; }
+  .outreach-fair__copy h2 { font-size: clamp(3rem, 14vw, 4.5rem); }
+  .outreach-fair__date { min-height: 0; grid-template-columns: 1fr auto; justify-items: start; border-inline-start: 0; border-block-start: 1px solid rgb(220 235 255 / 26%); padding: 1rem 0 0; }
+  .outreach-fair__date-label { grid-column: 1 / -1; }
+  .outreach-fair__date time { grid-template-columns: auto auto; justify-items: start; align-items: baseline; column-gap: .45rem; margin-block: .4rem; }
+  .outreach-fair__date time span { font-size: 4rem; }
+  .outreach-fair__date time b { margin: 0; font-size: .95rem; }
+  .outreach-fair__date time i { grid-column: 1 / -1; font-size: .7rem; }
+  .outreach-fair__date-status { justify-self: end; max-width: 9rem; line-height: 1.5; }
+  .outreach-fair__orbit { width: 26rem; inset-inline-end: -17rem; inset-block-start: -14rem; }
+  .outreach-connect__layout { grid-template-columns: minmax(0, 1fr); }
+  .outreach-connect__copy h2 { font-size: clamp(2.4rem, 10vw, 3.4rem); }
+  .outreach-connect__actions { align-items: flex-start; flex-direction: column; gap: 1rem; }
+  .outreach-connect__visual { min-height: 16rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .outreach-filter, .outreach-card, .outreach-card__toggle, .site-nav__login { transition: none; }
+}
