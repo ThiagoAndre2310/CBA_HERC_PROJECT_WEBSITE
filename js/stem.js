@@ -36,8 +36,6 @@ const resultCount = document.querySelector("#result-count");
 const catalog = document.querySelector("#catalogo");
 const detail = document.querySelector("#resource-detail");
 const detailContent = document.querySelector("#detail-content");
-const printButton = document.querySelector(".print-resource");
-
 const categories = [...new Set(resources.map((resource) => resource.category))];
 const levels = [...new Set(resources.map((resource) => resource.suggestedSchoolLevel).filter(Boolean))];
 
