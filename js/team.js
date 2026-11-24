@@ -32,7 +32,6 @@ if (form) {
   const backButton = form.querySelector("#step-back");
   const nextButton = form.querySelector("#step-next");
   const submitButton = form.querySelector("#step-submit");
-  const errorBox = form.querySelector("#submission-error");
   const review = form.querySelector("#submission-review");
   const classroomFields = form.querySelector(".classroom-fields");
   const classroomCredit = form.querySelector(".classroom-credit");
@@ -48,7 +47,7 @@ if (form) {
     const creditInput = classroomCredit.querySelector("input");
     creditInput.required = isClassroom;
   }
-  function showStep(step) {
+  function showStep(step, moveFocus = false) {
     currentStep = step;
     steps.forEach((element) => { element.hidden = Number(element.dataset.step) !== step; });
     progress.forEach((element) => {
@@ -61,10 +60,11 @@ if (form) {
     backButton.disabled = step === 1;
     nextButton.hidden = step === 4;
     submitButton.hidden = step !== 4;
-    errorBox.hidden = true;
-    const legend = form.querySelector(`[data-step="${step}"] legend`);
-    legend.tabIndex = -1;
-    legend.focus();
+    if (moveFocus) {
+      const legend = form.querySelector(`[data-step="${step}"] legend`);
+      legend.tabIndex = -1;
+      legend.focus();
+    }
   }
   function validateCurrentStep() {
     const fieldset = form.querySelector(`[data-step="${currentStep}"]`);
@@ -78,7 +78,6 @@ if (form) {
     }
     return true;
   }
-  function showError(message) { errorBox.textContent = message; errorBox.hidden = false; errorBox.focus(); }
   function buildReview() {
     const data = new FormData(form);
     const type = data.get("experienceType") === "classroom" ? "Así lo probamos en el aula" : "Así lo aprendí";
@@ -98,9 +97,9 @@ if (form) {
   nextButton.addEventListener("click", () => {
     if (!validateCurrentStep()) return;
     if (currentStep === 3) buildReview();
-    showStep(Math.min(currentStep + 1, 4));
+    showStep(Math.min(currentStep + 1, 4), true);
   });
-  backButton.addEventListener("click", () => showStep(Math.max(currentStep - 1, 1)));
+  backButton.addEventListener("click", () => showStep(Math.max(currentStep - 1, 1), true));
   form.addEventListener("submit", (event) => {
     event.preventDefault();
     if (currentStep !== 4 || !validateCurrentStep()) return;
@@ -113,7 +112,7 @@ if (form) {
     form.hidden = false;
     success.hidden = true;
     updateTypeFields();
-    showStep(1);
+    showStep(1, true);
   });
   updateTypeFields();
   showStep(1);

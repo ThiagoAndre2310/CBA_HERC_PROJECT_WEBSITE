@@ -544,6 +544,22 @@
 .submission-success > span { display: grid; width: 2.4rem; aspect-ratio: 1; place-items: center; border: 1px solid #73E0B4; border-radius: 50%; color: #73E0B4; }
 .submission-success h3 { margin-block: 1rem .5rem; color: white; font-size: 1.25rem; }
 .submission-success p { margin-block-end: 1.2rem; color: #C2D1E7; font-size: .82rem; line-height: 1.7; }
+.engineering-page { overflow: clip; }
+.engineering-hero { background: radial-gradient(ellipse at 80% 45%, rgb(52 120 200 / 20%), transparent 38%), linear-gradient(118deg, #08172F, #102A56 60%, #0A1D3B); }
+.engineering-hero__layout { display: grid; min-height: 33rem; grid-template-columns: 1fr 1fr; align-items: center; gap: 2rem; padding-block: clamp(3rem, 7vw, 6rem); }
+.engineering-hero h1 { max-width: 10ch; margin-block: 1rem; color: white; font-size: clamp(3rem, 6vw, 5rem); letter-spacing: -.07em; line-height: .98; }
+.engineering-hero h1 span { color: var(--color-blue-light); }
+.engineering-hero__layout > div > p:not(.eyebrow, .engineering-status) { max-width: 42ch; color: #C2D1E7; line-height: 1.8; }
+.engineering-status { margin-block-start: 1.5rem; color: #9EB3D1; font-size: .6rem; font-weight: 700; letter-spacing: .14em; }
+.engineering-hero figure { width: min(100%, 43rem); justify-self: end; }
+.engineering-hero img { width: 100%; border-radius: 1rem; }
+.engineering-hero figcaption { margin-block-start: .6rem; color: #9EB3D1; font-size: .55rem; letter-spacing: .12em; }
+.engineering-content { background: #0D2345; }
+.engineering-content__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+.engineering-content article { min-height: 15rem; border: 1px solid rgb(220 235 255 / 14%); border-radius: .8rem; background: linear-gradient(145deg, #173968, #102A56); padding: 1.3rem; }
+.engineering-content article > span { color: var(--color-blue-light); font-size: .55rem; font-weight: 700; letter-spacing: .14em; }
+.engineering-content h2 { margin-block: 1rem .6rem; color: white; font-size: 1.3rem; }
+.engineering-content p { margin-block-end: 1rem; color: #B9C9E0; font-size: .8rem; line-height: 1.7; }
 
 @media (prefers-reduced-motion: reduce) {
   .hero__eyebrow, .hero h1, .hero__summary, .hero__actions, .hero__caption, .hero-art { animation: none !important; }
